@@ -14,7 +14,20 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text("Hola Compose! :)")
+            HelloCompose()
         }
     }
+}
+
+@Composable
+fun HelloCompose() {
+    Text("Hello Compose :(")
+}
+
+@Preview(
+    showBackground = true
+)
+@Composable
+fun HelloComposePreview() {
+    HelloCompose()
 }
